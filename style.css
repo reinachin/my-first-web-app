@@ -67,3 +67,62 @@ body, h1, p {
     box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5);
     letter-spacing: 0.1em;
 }
+/* --- About セクション --- */
+.about {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.about h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    color: #ff8c00;
+}
+
+.about p {
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+/* --- Menu セクション --- */
+.menu {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.menu h2 {
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #ff8c00;
+}
+
+.menu-list {
+    display: flex; /* 横並びにする魔法の言葉 */
+    justify-content: center;
+    gap: 30px; /* アイテム間の隙間 */
+    flex-wrap: wrap; /* 画面が狭くなったら折り返す */
+}
+
+.menu-item {
+    border: 1px solid #eee;
+    padding: 20px;
+    width: 200px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.menu-item:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+/* --- フッター --- */
+footer {
+    padding: 40px;
+    background-color: #333;
+    color: white;
+    text-align: center;
+}
