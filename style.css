@@ -61,11 +61,42 @@ body, h1, p {
     animation: fadeInUp 1.2s ease-out 0.8s both;
 }
 
+/* --- 1. ボタンをライラックのグラデーションに --- */
+.btn {
+    /* オレンジからライラック系に変更 */
+    background: linear-gradient(135deg, #E0BBE4 0%, #C8A2C8 100%); 
+    color: #fff;
+    padding: 18px 50px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* 影の色もライラック系に合わせてふんわりと */
+    box-shadow: 0 10px 20px rgba(200, 162, 200, 0.3); 
+    animation: fadeInUp 1.2s ease-out 0.8s both;
+}
+
 .btn:hover {
-    transform: scale(1.15) rotate(2deg);
-    background: linear-gradient(135deg, #ff8c00 0%, #ffd700 100%);
-    box-shadow: 0 15px 30px rgba(255, 140, 0, 0.5);
+    transform: scale(1.1) translateY(-3px); /* 少し大きく、上に浮く */
+    background: linear-gradient(135deg, #C8A2C8 0%, #E0BBE4 100%);
+    box-shadow: 0 15px 30px rgba(200, 162, 200, 0.5);
     letter-spacing: 0.1em;
+}
+
+/* --- 2. メニューに「浮き上がる」動きをつける --- */
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    display: inline-block; /* 動きをつけるために必要 */
+    transition: 0.3s; /* 変化をなめらかに */
+}
+
+.nav-links a:hover {
+    color: #C8A2C8;      /* ライラック色に変わる */
+    transform: translateY(-3px); /* 3ピクセル上にひょいっと動く */
 }
 /* --- About セクション --- */
 .about {
@@ -178,3 +209,4 @@ footer {
 body {
     padding-top: 80px;
 }
+
