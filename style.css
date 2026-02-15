@@ -154,4 +154,20 @@ body {
     line-height: 1.8;
 }
 
+/* ふわっと浮き上がるアニメーションの定義 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* アニメーションを適用するクラス */
+.fade-in {
+    animation: fadeInUp 1.5s ease-out forwards;
+}
 
