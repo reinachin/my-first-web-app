@@ -166,22 +166,23 @@ body {
     }
 }
 
-/* アニメーションを適用するクラス */
-.fade-in {
-    animation: fadeInUp 1.5s ease-out forwards;
+
+/* 見出しはすぐ（0.2秒後）に動き出す */
+h2.fade-in {
+    animation-delay: 0.2s;
 }
 
-/* 1番目のログ：0.5秒遅れてスタート */
-.log-item:nth-child(1) {
-    animation-delay: 0.5s;
-}
+/* その後、ログが順番に出てくる */
+.log-item:nth-child(1) { animation-delay: 0.6s; }
+.log-item:nth-child(2) { animation-delay: 0.9s; }
+.log-item:nth-child(3) { animation-delay: 1.2s; }
+.log-item:nth-child(4) { animation-delay: 1.5s; }
 
-/* 2番目のログ：0.8秒遅れてスタート */
-.log-item:nth-child(2) {
-    animation-delay: 0.8s;
-}
-
-/* 3番目のログ：1.1秒遅れてスタート */
-.log-item:nth-child(3) {
-    animation-delay: 1.1s;
+/* 「fade-in」というクラスがついたものを実際に動かす設定 */
+.fade-in, .log-item {
+    opacity: 0;                /* 最初は隠す */
+    animation-name: fadeInUp;   /* @keyframes fadeInUp を使う */
+    animation-duration: 1.0s;  /* 1秒かけて動く */
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards; /* 動いた後はそのまま表示し続ける */
 }
